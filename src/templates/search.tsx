@@ -43,9 +43,8 @@ const config: HeadlessConfig = {
   verticalKey: "books",
 };
 
-const searcher = provideHeadless(config);
-
 const Search: Template<TemplateRenderProps> = () => {
+  const searcher = provideHeadless(config);
   return (
     <SearchHeadlessProvider searcher={searcher}>
       <div className="px-4 py-8">

@@ -3,9 +3,10 @@ import { CardProps } from "@yext/search-ui-react";
 // import { Books } from "../types/books";
 
 const BookCard = ({ result }: CardProps<any>): JSX.Element => {
+  console.log(result);
   return (
     <div
-      key={result.index}
+      key={result.rawData.uid}
       className="mb-4 justify-between rounded-lg border bg-zinc-100 p-4 text-stone-900 shadow-sm flex flex-col gap-4"
     >
       <div>{result.index}</div>
