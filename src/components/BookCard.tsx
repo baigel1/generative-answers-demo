@@ -3,7 +3,6 @@ import { CardProps } from "@yext/search-ui-react";
 // import { Books } from "../types/books";
 
 const BookCard = ({ result }: CardProps<any>): JSX.Element => {
-  console.log(result);
   return (
     <div
       key={result.rawData.uid}
