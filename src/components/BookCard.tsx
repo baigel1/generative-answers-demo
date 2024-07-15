@@ -5,7 +5,7 @@ import { CardProps } from "@yext/search-ui-react";
 const BookCard = ({ result }: CardProps<any>): JSX.Element => {
   return (
     <div
-      key={result.rawData.uid}
+      key={result.index}
       className="mb-4 justify-between rounded-lg border bg-zinc-100 p-4 text-stone-900 shadow-sm flex flex-col gap-4"
     >
       <div>{result.index}</div>

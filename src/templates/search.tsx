@@ -16,7 +16,6 @@ import {
 } from "@yext/search-headless-react";
 import {
   SearchBar,
-  StandardCard,
   VerticalResults,
   GenerativeDirectAnswer,
 } from "@yext/search-ui-react";
@@ -51,7 +50,7 @@ const Search: Template<TemplateRenderProps> = () => {
     <SearchHeadlessProvider searcher={searcher}>
       <div className="px-4 py-8">
         <div className="mx-auto flex max-w-5xl flex-col">
-          <SearchBar />
+          <SearchBar placeholder="Ask me a question about Harry Potter" />
           <GenerativeDirectAnswer customCssClasses={{ container: "my-4" }} />
           <VerticalResults
             CardComponent={BookCard}
