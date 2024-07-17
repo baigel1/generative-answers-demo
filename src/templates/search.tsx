@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import {
   Template,
   GetPath,
@@ -14,13 +15,10 @@ import {
   provideHeadless,
   HeadlessConfig,
 } from "@yext/search-headless-react";
-import {
-  SearchBar,
-  VerticalResults,
-  GenerativeDirectAnswer,
-} from "@yext/search-ui-react";
+import { SearchBar, VerticalResults } from "@yext/search-ui-react";
 
 import BookCard from "../components/BookCard";
+import GenerativeAnswer from "../components/GenerativeAnswer";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return "search";
@@ -45,12 +43,13 @@ const config: HeadlessConfig = {
 
 const Search: Template<TemplateRenderProps> = () => {
   const searcher = provideHeadless(config);
+
   return (
     <SearchHeadlessProvider searcher={searcher}>
       <div className="px-4 py-8">
         <div className="mx-auto flex max-w-5xl flex-col">
           <SearchBar placeholder="Ask me a question about Harry Potter" />
-          <GenerativeDirectAnswer customCssClasses={{ container: "my-4" }} />
+          <GenerativeAnswer />
           <VerticalResults
             CardComponent={BookCard}
             displayAllOnNoResults={false}
