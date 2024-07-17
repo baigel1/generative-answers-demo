@@ -50,10 +50,7 @@ const Search: Template<TemplateRenderProps> = () => {
         <div className="mx-auto flex max-w-5xl flex-col">
           <SearchBar placeholder="Ask me a question about Harry Potter" />
           <GenerativeAnswer />
-          <VerticalResults
-            CardComponent={BookCard}
-            displayAllOnNoResults={false}
-          />
+          <VerticalResults CardComponent={BookCard} />
         </div>
       </div>
     </SearchHeadlessProvider>

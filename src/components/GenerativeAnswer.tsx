@@ -5,6 +5,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import { useSearchState } from "@yext/search-headless-react";
 import { GenerativeDirectAnswer } from "@yext/search-ui-react";
+import SourceCard from "./SourceCard";
 
 const GenerativeAnswer = () => {
   const gdaLoading = useSearchState(
@@ -13,7 +14,10 @@ const GenerativeAnswer = () => {
   return (
     <>
       <div className="my-4">{gdaLoading && <Skeleton count={5} />}</div>
-      <GenerativeDirectAnswer customCssClasses={{ container: "my-4" }} />
+      <GenerativeDirectAnswer
+        CitationCard={SourceCard}
+        customCssClasses={{ container: "my-4" }}
+      />
     </>
   );
 };
