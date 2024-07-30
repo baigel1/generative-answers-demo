@@ -5,15 +5,18 @@ import { useSearchState } from "@yext/search-headless-react";
 
 import BookCard from "./BookCard";
 import GenerativeAnswer from "./GenerativeAnswer";
+import SearchResultDisplay from "./SearchResultDisplay";
 
 const SearchResults = () => {
   console.log("search results are");
-  const searchState = useSearchState((state) => state.vertical.results);
-  console.log(searchState);
+  const verticalResults = useSearchState((state) => state.vertical.results);
+  console.log(verticalResults);
+
   return (
     <>
       <GenerativeAnswer />
-      <VerticalResults CardComponent={BookCard} />
+      {verticalResults && verticalResults.length > 0 &&
+        <SearchResultDisplay results={verticalResults} />}
     </>
   );
 };
