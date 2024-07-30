@@ -1,5 +1,5 @@
-import React from 'react';
-import SearchResultCard from './SearchResultCard';
+import * as React from "react";
+import SearchResultCard from "./SearchResultCard";
 
 const SearchResultsDisplay = ({ results }) => {
   return (
