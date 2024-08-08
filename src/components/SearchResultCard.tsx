@@ -23,6 +23,10 @@ const SearchResult = ({ result }) => {
         <p className="font-semibold">Relevance Score:</p>
         <p className="font-light">{result.segment.score}</p>
       </div>
+      <div className="flex gap-1">
+        <p className="font-semibold">Page Number:</p>
+        <p className="font-light">{result.segment.pageNumber}</p>
+      </div>
     </div>
   );
 };
