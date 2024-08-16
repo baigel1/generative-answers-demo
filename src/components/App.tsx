@@ -5,7 +5,7 @@ import SearchResults from "./SearchResults";
 const App = () => {
   return (
     <div className="mx-auto flex max-w-5xl flex-col my-4">
-      <SearchBar placeholder="Ask me a question about Harry Potter - search ui react" />
+      <SearchBar placeholder="Ask me a question about Harry Potter - React SDK" />
       <SearchResults />
     </div>
   );
